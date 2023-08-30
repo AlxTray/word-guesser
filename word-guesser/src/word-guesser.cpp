@@ -7,8 +7,8 @@
 int main()
 {
 	VectorHelper wordVector;
-	wordVector.generateMemoryWordVector();
-	std::cout << wordVector.getRandomWordFromVector();
+	wordVector.generate();
+	wordVector.display();
 
 	return 0;
 }

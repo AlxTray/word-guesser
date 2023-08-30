@@ -15,7 +15,7 @@ VectorHelper::VectorHelper()
 	rng = std::mt19937(dev());
 }
 
-void VectorHelper::generateMemoryWordVector()
+void VectorHelper::generate()
 {
 	randomWordsMemoryVector.clear();
 	for (int i = 0; i < sizeOfMemoryVector; i++) {
@@ -24,12 +24,19 @@ void VectorHelper::generateMemoryWordVector()
 	}
 }
 
-std::vector<std::string> VectorHelper::getWordVector()
+std::vector<std::string> VectorHelper::getVector()
 {
 	return randomWordsMemoryVector;
 }
 
-std::string VectorHelper::getRandomWordFromVector()
+void VectorHelper::display()
+{
+	for (auto& word : randomWordsMemoryVector) {
+		std::cout << word << ", ";
+	}
+}
+
+std::string VectorHelper::getRandomWord()
 {
 	return randomWordsMemoryVector.at(getRandomIndex(sizeOfMemoryVector - 1));
 }

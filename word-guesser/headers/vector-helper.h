@@ -9,9 +9,10 @@
 class VectorHelper {
 	public:
 		VectorHelper();
-		void generateMemoryWordVector();
-		std::vector<std::string> getWordVector();
-		std::string getRandomWordFromVector();
+		void generate();
+		std::vector<std::string> getVector();
+		void display();
+		std::string getRandomWord();
 
 	private:
 		int getRandomIndex(int distributionCeiling);
