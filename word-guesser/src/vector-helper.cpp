@@ -15,14 +15,23 @@ VectorHelper::VectorHelper()
 	rng = std::mt19937(dev());
 }
 
+void VectorHelper::generateMemoryWordVector()
+{
+	randomWordsMemoryVector.clear();
+	for (int i = 0; i < sizeOfMemoryVector; i++) {
+		randomWordsMemoryVector.push_back(allWordsVector
+			.at(getRandomIndex(allWordsVector.size())));
+	}
+}
+
 std::vector<std::string> VectorHelper::getWordVector()
 {
-	return allWordsVector;
+	return randomWordsMemoryVector;
 }
 
 std::string VectorHelper::getRandomWordFromVector()
 {
-	return std::string();
+	return randomWordsMemoryVector.at(getRandomIndex(sizeOfMemoryVector - 1));
 }
 
 int VectorHelper::getRandomIndex(int distributionCeiling)

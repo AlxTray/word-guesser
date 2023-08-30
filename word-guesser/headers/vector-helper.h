@@ -9,6 +9,7 @@
 class VectorHelper {
 	public:
 		VectorHelper();
+		void generateMemoryWordVector();
 		std::vector<std::string> getWordVector();
 		std::string getRandomWordFromVector();
 
@@ -18,6 +19,7 @@ class VectorHelper {
 		std::vector<std::string> allWordsVector;
 		std::vector<std::string> randomWordsMemoryVector;
 		std::string randomWordToGuess;
-
 		std::mt19937 rng;
+
+		int sizeOfMemoryVector = 5;
 };
