@@ -7,7 +7,7 @@
 int main()
 {
 	VectorHelper wordVector;
-	wordVector.getWordVector();
+	std::cout << wordVector.getWordVector().size();
 
 	return 0;
 }
