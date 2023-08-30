@@ -34,6 +34,7 @@ void VectorHelper::display()
 	for (auto& word : randomWordsMemoryVector) {
 		std::cout << word << ", ";
 	}
+	std::cout << std::endl;
 }
 
 std::string VectorHelper::getRandomWord()
