@@ -2,10 +2,12 @@
 //
 
 #include "../headers/word-guesser.h"
+#include "../headers/vector-helper.h"
 
 int main()
 {
-	std::cout << "Hello CMake.";
+	VectorHelper wordVector;
+	wordVector.getWordVector();
 
 	return 0;
 }

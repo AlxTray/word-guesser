@@ -3,7 +3,7 @@
 #
 
 # Add source to this project's executable.
-add_executable (word-guesser "src/word-guesser.cpp" "headers/word-guesser.h" "src/vector-gen.cpp" "headers/vector-gen.h")
+add_executable (word-guesser "src/word-guesser.cpp" "headers/word-guesser.h" "src/vector-helper.cpp" "headers/vector-helper.h")
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET word-guesser PROPERTY CXX_STANDARD 20)
