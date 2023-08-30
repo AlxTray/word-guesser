@@ -4,6 +4,7 @@
 #include <vector>
 #include <fstream>
 #include <string>
+#include <random>
 
 class VectorHelper {
 	public:
@@ -12,7 +13,11 @@ class VectorHelper {
 		std::string getRandomWordFromVector();
 
 	private:
+		int getRandomIndex(int distributionCeiling);
+
 		std::vector<std::string> allWordsVector;
 		std::vector<std::string> randomWordsMemoryVector;
 		std::string randomWordToGuess;
+
+		std::mt19937 rng;
 };
