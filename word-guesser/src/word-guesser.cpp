@@ -15,6 +15,7 @@ int main()
 	std::cout << "Type anything to begin." << std::endl;
 	std::string answer = "";
 	std::cin >> answer;
+	std::string randomWord = "";
 	while (answer != "exit") {
 		std::cout << std::string(5, '\n');
 		wordVector.generate();
@@ -23,7 +24,8 @@ int main()
 		std::this_thread::sleep_for(std::chrono::milliseconds(5000)); // Pause for 5 seconds
 		std::cout << std::string(30, '\n'); // Clear console
 
-		std::cout << wordVector.getRandomWord() << std::endl;
+		randomWord = wordVector.getRandomWord();
+		std::cout << wordVector.getCoveredWord() << std::endl;
 
 		std::cout << "Type 'y' to continue, or type 'exit' to stop";
 		std::cin >> answer;

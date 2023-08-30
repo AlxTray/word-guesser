@@ -39,7 +39,18 @@ void VectorHelper::display()
 
 std::string VectorHelper::getRandomWord()
 {
-	return randomWordsMemoryVector.at(getRandomIndex(sizeOfMemoryVector - 1));
+	randomWordToGuess = randomWordsMemoryVector.at(getRandomIndex(sizeOfMemoryVector - 1));
+	return randomWordToGuess;
+}
+
+std::string VectorHelper::getCoveredWord()
+{
+	std::string coveredWord = randomWordToGuess;
+	for (int i = 0; i < (std::floor(randomWordToGuess.size() / 2) - 1); i++) {
+		coveredWord[getRandomIndex(randomWordToGuess.size() - 1)] = '-';
+	}
+
+	return coveredWord;
 }
 
 int VectorHelper::getRandomIndex(int distributionCeiling)

@@ -13,6 +13,7 @@ class VectorHelper {
 		std::vector<std::string> getVector();
 		void display();
 		std::string getRandomWord();
+		std::string getCoveredWord();
 
 	private:
 		int getRandomIndex(int distributionCeiling);
