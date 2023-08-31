@@ -10,7 +10,7 @@ int main()
 
 	std::cout << "Welcome to Word Guesser!" << std::endl;
 	std::cout << "You will be given a list of words and then 3 rounds of a word being shown from that list with letters missing, you have to guess that word." << std::endl;
-	std::cout << "You will be given 15 seconds to memorise the list." << std::endl;
+	std::cout << "You will be given 15 seconds to memorise the list. \n" << std::endl;
 
 	std::cout << "Type anything to begin." << std::endl;
 	std::string answer = "";
@@ -22,7 +22,7 @@ int main()
 		wordVector.display();
 
 		std::this_thread::sleep_for(std::chrono::milliseconds(5000)); // Pause for 5 seconds
-		std::cout << std::string(30, '\n'); // Clear console
+		std::cout << std::string(100, '\n'); // Clear console
 
 		int amountCorrect = 0;
 		std::string givenWord = "";
@@ -43,6 +43,7 @@ int main()
 
 			std::cout << std::string(10, '\n');
 		}
+		std::cout << "You got " << amountCorrect << " correct." << std::string(5, '\n');
 
 		std::cout << "Type 'y' to continue, or type 'exit' to stop";
 		std::cin >> answer;
